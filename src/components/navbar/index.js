@@ -14,9 +14,10 @@ export default function Navbar(props) {
           </a>
           <ul className="flex-1 flex justify-end items-center gap-16 max-lg:hidden">
             {navLinks.map((item) => (
-              <li key={item.label}>
+              <li key={item.label} className={window.location.pathname === item.href && 'border-b-2'}>
                 <a
                   href={item.href}
+                  link
                   className="font-montserrat leading-normal text-lg text-white"
                 >
                   {item.label}
