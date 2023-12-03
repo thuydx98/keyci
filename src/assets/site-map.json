@@ -1,0 +1,32 @@
+[
+    {
+        "label": "Commercial",
+        "href": "/",
+        "videos": [
+            {
+                "title": "VIETNAM Beer - BIA CỦA NGƯỜI VIỆT",
+                "description": "Tự hào là dòng bia dành riêng cho người Việt, bia Việt Nam trải qua quá trình nghiên cứu, chắt lọc từ khẩu vị, thói quen uống bia, phong cách ẩm thực và văn hoá Việt Nam. Được nấu từ những nguyên liệu tự nhiên bao gồm nước, đại mạch, hoa bia, ngũ cốc và men bia, bia Việt Nam để lại dư vị khó quên sau mỗi lần uống nhờ vị bia êm đằm, độ đắng cân bằng và hậu vị đặc trưng. Với sự đầu tư chỉn chu và nỗ lực không ngừng nghỉ, AQBECO đã tạo ra một sản phẩm bia góp phần tôn vinh các giá trị văn hóa và truyền thống của dân tộc.",
+                "createAt": "2023-04-21T00:00:00Z",
+                "vendor": "Tập đoàn bia Sài Gòn Ái Quốc - AQBECO",
+                "duration": 43,
+                "background": "https://i.ytimg.com/vi/CScH67bdiJY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEUgVyhyMA8=&amp;rs=AOn4CLCGHDAcDlwJpo4WWFGD5K-VfWSyNg",
+                "link": "https://youtu.be/FDjZ5h0Xk4k"
+            }
+        ]
+    },
+    {
+        "label": "Products",
+        "href": "/products",
+        "videos": []
+    },
+    {
+        "label": "Music Videos",
+        "href": "/music-videos",
+        "videos": []
+    },
+    {
+        "label": "Events",
+        "href": "/events",
+        "videos": []
+    }
+]
