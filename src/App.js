@@ -1,7 +1,6 @@
 import Navbar from "./components/navbar";
 import navLinks from "./assets/site-map.json";
 import Slider from "./components/slider";
-import { AiFillCaretRight } from "react-icons/ai";
 import VideoModal from "./components/video-modal";
 
 function App() {
