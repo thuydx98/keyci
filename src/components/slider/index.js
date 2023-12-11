@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./styles.css";
@@ -43,20 +43,23 @@ const sliderImageUrl = [
   },
 ];
 const Slider = () => {
+  const [selected, setSelected] = useState(0);
   return (
     <div className="parent bottom-0">
       <Carousel
         responsive={responsive}
-        autoPlay={true}
-        swipeable={true}
-        draggable={true}
-        showDots={false}
-        infinite={true}
-        partialVisible={true}
+        autoPlay={false}
+        centerMode
+        // swipeable
+        // draggable
+        infinite={false}
+        // partialVisible
+        focusOnSelect
+        // showDots
       >
         {sliderImageUrl.map((imageUrl, index) => {
           return (
-            <div className="slider" key={index}>
+            <div className={`slider ${selected === index && 'selected'}`} key={index}>
               <img src={imageUrl.url} alt="movie" />
             </div>
           );

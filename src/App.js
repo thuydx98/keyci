@@ -2,6 +2,7 @@ import Navbar from "./components/navbar";
 import navLinks from "./assets/site-map.json";
 import Slider from "./components/slider";
 import { AiFillCaretRight } from "react-icons/ai";
+import VideoModal from "./components/video-modal";
 
 function App() {
   return (
@@ -33,10 +34,8 @@ function App() {
               {navLinks[0].videos[0].duration} seconds
             </p>
             <p>{navLinks[0].videos[0].description}</p>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold mt-5 py-2 px-4 border border-yellow-500 rounded-lg flex">
-              <AiFillCaretRight className="text-2xl" />
-              Watch now
-            </button>
+            
+            <VideoModal />
           </div>
           <Slider />
         </div>
