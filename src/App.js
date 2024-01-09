@@ -11,7 +11,7 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState();
 
   useEffect(() => {
-    const selectedTab = tabs.find((t) => t.href === location.pathname)
+    const selectedTab = tabs.find((t) => location.pathname.replace('keyci', '').endsWith( t.href))
     setSelectedTab(selectedTab);
     setSelectedVideo(selectedTab?.videos[0]);
   }, [location]);
