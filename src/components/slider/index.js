@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./styles.css";
+import { useLocation } from "react-router-dom";
+import tabs from "../../assets/site-map.json";
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -19,32 +22,23 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
 };
-const sliderImageUrl = [
-  //First image url
-  {
-    url: "https://i2.wp.com/www.geeksaresexy.net/wp-content/uploads/2020/04/movie1.jpg?resize=600%2C892&ssl=1",
-  },
-  {
-    url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-kids-movies-2020-call-of-the-wild-1579042974.jpg?crop=0.9760858955588091xw:1xh;center,top&resize=480:*",
-  },
-  //Second image url
-  {
-    url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-movies-for-kids-2020-sonic-the-hedgehog-1571173983.jpg?crop=0.9871668311944719xw:1xh;center,top&resize=480:*",
-  },
-  //Third image url
-  {
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS82ET2bq9oTNwPOL8gqyoLoLfeqJJJWJmKQ&usqp=CAU",
-  },
+const Slider = (props) => {
+  let location = useLocation();
+  const [selectedItem, setSelectedItem] = useState();
+  const [selectedTab, setSelectedTab] = useState();
 
-  //Fourth image url
+  useEffect(() => {
+    const selected = tabs.find((t) => t.href === location.pathname);
+    setSelectedTab(selected);
+    setSelectedItem(selected.videos[0]);
+  }, [location]);
 
-  {
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTdvuww0JDC7nFRxiFL6yFiAxRJgM-1tvJTxA&usqp=CAU",
-  },
-];
-const Slider = () => {
-  const [selected, setSelected] = useState(0);
-  return (
+  const updateSelectedItem = useCallback((video) => {
+    setSelectedItem(video);
+    props.onChange(video);
+  }, [props]);
+
+  return selectedTab && (
     <div className="parent bottom-0">
       <Carousel
         responsive={responsive}
@@ -54,13 +48,13 @@ const Slider = () => {
         // draggable
         infinite={false}
         // partialVisible
-        focusOnSelect
+        // focusOnSelect
         // showDots
       >
-        {sliderImageUrl.map((imageUrl, index) => {
+        {selectedTab.videos.map((video) => {
           return (
-            <div className={`slider ${selected === index && 'selected'}`} key={index}>
-              <img src={imageUrl.url} alt="movie" onClick={() => setSelected(index)} />
+            <div className={`slider ${selectedItem?.id === video.id && 'selected'}`} key={video.id}>
+              <img src={video.background} alt="movie" onClick={() => updateSelectedItem(video)} />
             </div>
           );
         })}

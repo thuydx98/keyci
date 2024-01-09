@@ -2,13 +2,13 @@ import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { AiFillCaretRight } from "react-icons/ai";
 
-export default function VideoModal() {
+export default function VideoModal(props) {
   const [modalOpen, setModalOpen] = useState(false);
-
+  console.log(props.source)
   return (
     <div>
       <button
-        className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold mt-5 py-2 px-4 border border-yellow-500 rounded-lg flex"
+        className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold mt-10 py-2 px-4 border border-yellow-500 rounded-lg flex"
         onClick={() => setModalOpen(true)}
       >
         <AiFillCaretRight className="text-2xl" />
@@ -45,7 +45,7 @@ export default function VideoModal() {
                   title="video"
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/FDjZ5h0Xk4k?autoplay=1&loop=1"
+                  src={props.source}
                 ></iframe>
               </Dialog.Panel>
             </div>

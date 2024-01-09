@@ -1,13 +1,26 @@
 import Navbar from "./components/navbar";
-import navLinks from "./assets/site-map.json";
 import Slider from "./components/slider";
 import VideoModal from "./components/video-modal";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import tabs from "./assets/site-map.json";
 
 function App() {
-  return (
+  let location = useLocation();
+  const [selectedTab, setSelectedTab] = useState();
+  const [selectedVideo, setSelectedVideo] = useState();
+
+  useEffect(() => {
+    const selectedTab = tabs.find((t) => t.href === location.pathname)
+    setSelectedTab(selectedTab);
+    setSelectedVideo(selectedTab?.videos[0]);
+  }, [location]);
+
+  return selectedTab && (
     <div
+      id="bg-screen"
       className="h-screen w-full bg-contain bg-repeat-x bg-right"
-      style={{ backgroundImage: `url(${navLinks[0].videos[0].background}` }}
+      style={{ backgroundImage: `url(${selectedVideo.background}` }}
     >
       <div
         className="absolute h-screen w-full text-white"
@@ -18,25 +31,24 @@ function App() {
       >
         <div
           className="h-screen"
-          // style={{ backgroundImage: `url(${navLinks[0].videos[0].background}` }}
+          // style={{ backgroundImage: `url(${selectedVideo.background}` }}
         >
           <Navbar />
           <div className="w-full h-[57vh] md:w-6/12 lg:w-5/12 sm:px-16 px-4 pt-14">
-            <p className="text-5xl">{navLinks[0].videos[0].title}</p>
+            <p className="text-5xl">{selectedVideo.title}</p>
             <p className="text-sm text-gray-400 py-8">
-              {navLinks[0].videos[0].vendor} -{" "}
-              {new Date(navLinks[0].videos[0].createAt).toLocaleDateString(
+              {selectedVideo.vendor} -{" "}
+              {new Date(selectedVideo.createAt).toLocaleDateString(
                 "en-US",
                 { year: "numeric", month: "long" }
               )}
               {" - "}
-              {navLinks[0].videos[0].duration} seconds
+              {selectedVideo.duration} seconds
             </p>
-            <p>{navLinks[0].videos[0].description}</p>
-            
-            <VideoModal />
+            <p dangerouslySetInnerHTML={{__html: selectedVideo.description}} />
+            <VideoModal source={"https://www.youtube.com/embed/" + selectedVideo.id + "?autoplay=1&loop=1" }/>
           </div>
-          <Slider />
+          {selectedTab?.videos?.length > 1 && <Slider onChange={(video) => setSelectedVideo(video)} />}
         </div>
       </div>
     </div>

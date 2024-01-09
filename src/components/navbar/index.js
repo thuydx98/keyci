@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import navLinks from "../../assets/site-map.json";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,13 +16,7 @@ export default function Navbar(props) {
           <ul className="flex-1 flex justify-end items-center gap-16 max-lg:hidden">
             {navLinks.map((item) => (
               <li key={item.label} className={window.location.pathname === item.href && 'border-b-2'}>
-                <a
-                  href={item.href}
-                  link
-                  className="font-montserrat leading-normal text-lg text-white"
-                >
-                  {item.label}
-                </a>
+                <Link className="font-montserrat leading-normal text-lg text-white" to={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
@@ -47,12 +42,7 @@ export default function Navbar(props) {
             <ul className=" lg:hidden flex flex-col items-center justify-center h-full gap-y-10">
               {navLinks.map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="font-montserrat leading-normal text-lg text-slate-gray"
-                  >
-                    {item.label}
-                  </a>
+                  <Link className="font-montserrat leading-normal text-lg text-slate-gray" to={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>

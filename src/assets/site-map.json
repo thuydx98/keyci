@@ -5,28 +5,139 @@
         "videos": [
             {
                 "title": "VIETNAM Beer - BIA CỦA NGƯỜI VIỆT",
-                "description": "Tự hào là dòng bia dành riêng cho người Việt, bia Việt Nam trải qua quá trình nghiên cứu, chắt lọc từ khẩu vị, thói quen uống bia, phong cách ẩm thực và văn hoá Việt Nam. Được nấu từ những nguyên liệu tự nhiên bao gồm nước, đại mạch, hoa bia, ngũ cốc và men bia, bia Việt Nam để lại dư vị khó quên sau mỗi lần uống nhờ vị bia ... See more",
+                "description": "Tự hào là dòng bia dành riêng cho người Việt, bia Việt Nam trải qua quá trình nghiên cứu, chắt lọc từ khẩu vị, thói quen uống bia, phong cách ẩm thực và văn hoá Việt Nam.",
                 "createAt": "2023-04-21T00:00:00Z",
                 "vendor": "Tập đoàn bia Sài Gòn Ái Quốc - AQBECO",
-                "duration": 43,
-                "background": "https://i.ytimg.com/vi/CScH67bdiJY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEUgVyhyMA8=&amp;rs=AOn4CLCGHDAcDlwJpo4WWFGD5K-VfWSyNg",
-                "link": "https://youtu.be/FDjZ5h0Xk4k"
+                "duration": 31,
+                "background": "https://aqbeco.com/wp-content/uploads/2023/06/donhe-1024x1024.png",
+                "id": "FDjZ5h0Xk4k"
             }
         ]
     },
     {
         "label": "Products",
         "href": "/products",
-        "videos": []
+        "videos": [
+            {
+                "title": "Botanicals Brightening Gel Cleanser",
+                "description": "Gel rửa mặt phù hợp với mọi loại da, đặc biệt là da tổn thương vì mụn. Hãy sở hữu ngay Botanicals Brightening Gel Cleanser để cảm nhận sự khác biệt.",
+                "createAt": "2022-07-07T00:00:00Z",
+                "vendor": "VITA",
+                "duration": 33,
+                "background": "https://i.ytimg.com/vi/NTX6emjcDB4/maxresdefault.jpg",
+                "id": "yTdErxp5TGU"
+            },
+            {
+                "title": "Inner Glow Gommage",
+                "description": "Cho làn da \"ăn Thạch\" để tái sinh làn da căng mướt, mịn màng và đều màu. Với texture trong suốt, mát lạnh, chắc chắn sẽ đánh thức mọi giác quan, cho bạn một cảm giác thật #Fresh.",
+                "createAt": "2022-07-26T00:00:00Z",
+                "vendor": "VITA",
+                "duration": 26,
+                "background": "https://i.ytimg.com/vi_webp/BRMAb3WjIpY/maxresdefault.webp",
+                "id": "BRMAb3WjIpY"
+            },
+            {
+                "title": "Biphase Dual Action Makeup Remover",
+                "description": "Dung dịch tẩy trang tác động kép giúp làm sạch lớp trang điểm trên mặt, mắt và môi. Giúp làm sạch da mặt, hỗ trợ ngăn ngừa mụn. Giúp da trắng sáng, mờ thâm. Hỗ trợ dưỡng ẩm cho da mềm mịn.",
+                "createAt": "2022-07-28T00:00:00Z",
+                "vendor": "VITA",
+                "duration": 28,
+                "background": "https://i.ytimg.com/vi/HlxhcY3vDEs/maxresdefault.jpg",
+                "id": "HlxhcY3vDEs"
+            },
+            {
+                "title": "72 Hours Miracle Serum",
+                "description": "72 Hours Miracle Serum có kết cấu mỏng với phân tử siêu nhỏ dễ dàng thẩm thấu sâu vào da để khắc phục, sửa chữa và dung dưỡng tối ưu, mang lại hiệu quả cao nhất cho làn da. Da đủ ẩm, săn chắc, đàn hồi, giảm nếp nhăn và trắng sáng đều màu tự nhiên. ",
+                "createAt": "2022-08-01T00:00:00Z",
+                "vendor": "VITA",
+                "duration": 34,
+                "background": "https://i.ytimg.com/vi/84FuCetv5qw/maxresdefault.jpg",
+                "id": "OKvHQEmIzIg"
+            },
+            {
+                "title": "Nano HA Micro Surge Cream",
+                "description": "Làn da ngậm nước tức thì bởi siêu phân tử cấp nước #NanoHA thẩm thấu sâu tận hạ bì. #NanoHAMicroSurgeCream là bước cuối cùng trong quy trình chăm da giúp dưỡng & khóa ẩm, đồng thời cung cấp dưỡng chất dung dưỡng giúp da săn chắc, trắng sáng, mờ thâm sạm và ngăn chặn lão hóa.",
+                "createAt": "2022-08-03T00:00:00Z",
+                "vendor": "VITA",
+                "duration": 26,
+                "background": "https://i.ytimg.com/vi/kH_WhjQ_Uwo/maxresdefault.jpg",
+                "id": "LRQuZHbWucg"
+            }
+        ]
     },
     {
         "label": "Music Videos",
         "href": "/music-videos",
-        "videos": []
+        "videos": [
+            {
+                "title": "TÌNH YÊU CÓ AI NGỜ",
+                "description": "TÌNH YÊU CÓ AI NGỜ - ĐỖ LÊ HỒNG NHUNG | OFFICIAL MUSIC VIDEO <br> #tinhyeucoaingo #TYCAN #DoLeHongNhung #officialmv ",
+                "createAt": "2022-12-13T00:00:00Z",
+                "vendor": "Đỗ Lê Hồng Nhung",
+                "duration": 190,
+                "background": "https://i.ytimg.com/vi/21vlV0vD8Ag/maxresdefault.jpg",
+                "id": "21vlV0vD8Ag"
+            },
+            {
+                "title": "GIỮ LẤY LÀM GÌ",
+                "description": "© Bản quyền thuộc về MAX Official và Dien Quan Network <br> © Copyright by MAX Official and Dien Quan Network  ☞ Do not Reup​",
+                "createAt": "2022-11-20T00:00:00Z",
+                "vendor": "Nhâm Phương Nam Official",
+                "duration": 205,
+                "background": "https://photo.znews.vn/w660/Uploaded/wyhktpu/2019_09_03/6i.jpg",
+                "id": "7osnaHepW3o"
+            },
+            {
+                "title": "Waiting For You",
+                "description": "© Bản quyền thuộc về MAX Official và Dien Quan Network <br> © Copyright by MAX Official and Dien Quan Network  ☞ Do not Reup​",
+                "createAt": "2022-11-22T00:00:00Z",
+                "vendor": "Nhâm Phương Nam Official",
+                "duration": 249,
+                "background": "https://media.viez.vn/prod/2021/9/7/large_thumb_fe8412dc30.jpg",
+                "id": "p-Uzy2y5w0A"
+            },
+            {
+                "title": "Về nghe Yêu kể",
+                "description": "Dành tặng cho những cô gái ôm nỗi buồn vào mắt và quên… <br> <br>Là con gái nhất định phải dành đôi mắt trời cho để nhớ thương một người thực sự xứng đáng với mình. Khóc cũng được, cười cũng được. Nhưng nhất định không được giấu… những cảm xúc thật thà… vào sâu đôi mắt, nha em!",
+                "createAt": "2020-10-17T00:00:00Z",
+                "vendor": "9show",
+                "duration": 483,
+                "background": "https://i.ytimg.com/vi_webp/9bGHl1FcVZs/maxresdefault.webp",
+                "id": "9bGHl1FcVZs"
+            },
+            {
+                "title": "Em Là",
+                "description": "Một phiên bản khác của ca khúc EM LÀ. Mời mn cùng thưởng thức <br> Và đừng quên nhấn like và subcribe để theo dõi những sản phẩm âm nhạc tiếp theo nhá ❤️",
+                "createAt": "2022-11-20T00:00:00Z",
+                "vendor": "Nhâm Phương Nam Official",
+                "duration": 229,
+                "background": "https://images2.thanhnien.vn/zoom/686_429/Uploaded/dungpt/2021_06_24/nguyenminhcong/nguyenminhcong-nhamphuongnam9_UDCH.jpg",
+                "id": "QqYLyt-u8Nw"
+            }
+        ]
     },
     {
         "label": "Events",
         "href": "/events",
-        "videos": []
+        "videos": [
+            {
+                "title": "SamSung Bừng Chất Fan",
+                "description": "Dàn khách mời đã được hé lộ để mở đầu cho buổi trình diễn âm nhạc độc đáo, có “1-0-2” với tên gọi “ Bừng chất fan” được Samsung tổ chức hoành tráng tại cửa hàng trải nghiệm Samsung68 đặt tại toà nhà Bitexco.",
+                "createAt": "2021-12-25T00:00:00Z",
+                "vendor": "Samsung",
+                "duration": 144,
+                "background": "https://2sao.vietnamnetjsc.vn/images/2021/12/25/13/58/3.png",
+                "id": "cj_AW7-ridU"
+            },
+            {
+                "title": "Ra mắt Bloomberg Businessweek",
+                "description": "Chúc mừng Bloomberg Businessweek Vietnam đã chính thức ra mắt phẩm đầu tiên vô cùng xuất xắc 💚 <br> #xuhuong #tiktoktrending #xuhuongtiktok",
+                "createAt": "2023-10-12T00:00:00Z",
+                "vendor": "Bloomberg Businessweek Vietnam",
+                "duration": 205,
+                "background": "https://i.ytimg.com/vi_webp/Zm_KD7P3v_4/maxresdefault.webp",
+                "id": "Zm_KD7P3v_4"
+            }
+        ]
     }
 ]
