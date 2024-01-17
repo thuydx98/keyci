@@ -1,7 +1,6 @@
 {
   "name": "keyci",
   "version": "0.1.0",
-  "homepage": "https://thuydx98.github.io/keyci",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.17",
