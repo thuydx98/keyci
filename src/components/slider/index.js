@@ -12,7 +12,7 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 1024, min: 768 },
+    breakpoint: { max: 1024, min: 464 },
     items: 3,
     slidesToSlide: 1, // optional, default to 1.
   },
@@ -39,7 +39,7 @@ const Slider = (props) => {
   }, [props]);
 
   return selectedTab && (
-    <div className="parent bottom-0">
+    <div className="max-h-[30vh] parent bottom-0">
       <Carousel
         responsive={responsive}
         autoPlay={false}
@@ -47,6 +47,7 @@ const Slider = (props) => {
         // swipeable
         // draggable
         infinite={false}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
         // partialVisible
         // focusOnSelect
         // showDots
@@ -54,7 +55,7 @@ const Slider = (props) => {
         {selectedTab.videos.map((video) => {
           return (
             <div className={`slider ${selectedItem?.id === video.id && 'selected'}`} key={video.id}>
-              <img src={video.background} alt="movie" onClick={() => updateSelectedItem(video)} />
+              <img src={'/slider-images/' + video.id + '.jpg'} alt="movie" onClick={() => updateSelectedItem(video)} />
             </div>
           );
         })}

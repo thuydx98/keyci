@@ -4,7 +4,6 @@ import { AiFillCaretRight } from "react-icons/ai";
 
 export default function VideoModal(props) {
   const [modalOpen, setModalOpen] = useState(false);
-  console.log(props.source)
   return (
     <div>
       <button
@@ -31,7 +30,7 @@ export default function VideoModal(props) {
 
           {/* 3. The modal video */}
           <Transition.Child
-            className="fixed inset-0 z-[99999] flex p-6"
+            className="fixed inset-0 z-[99999] flex p-0"
             enter="transition ease-out duration-300"
             enterFrom="opacity-0 scale-75"
             enterTo="opacity-100 scale-100"
@@ -39,7 +38,7 @@ export default function VideoModal(props) {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-75"
           >
-            <div className="max-w-5xl mx-auto h-full w-11/12 flex items-center">
+            <div className="max-w-5xl mx-auto h-full w-11/12 sm:w-12/12 flex items-center">
               <Dialog.Panel className="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden">
                 <iframe
                   title="video"

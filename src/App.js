@@ -34,9 +34,9 @@ function App() {
           // style={{ backgroundImage: `url(${selectedVideo.background}` }}
         >
           <Navbar />
-          <div className="w-full h-[57vh] md:w-9/12 lg:w-5/12 sm:px-16 px-4 pt-14">
-            <p className="text-5xl">{selectedVideo.title}</p>
-            <p className="text-sm text-gray-400 py-8">
+          <div className="w-full h-[55vh] md:w-9/12 lg:w-5/12 sm:px-16 px-4 lg:pt-14 md:pt-12 sm:pt-4">
+            <p className="font-montserrat lg:text-5xl md:text-5xl text-4xl">{selectedVideo.title}</p>
+            <p className="text-sm text-gray-400 pt-6 pb-4">
               {selectedVideo.vendor} -{" "}
               {new Date(selectedVideo.createAt).toLocaleDateString(
                 "en-US",

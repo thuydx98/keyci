@@ -8,7 +8,13 @@ export default function Navbar(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <header className="sm:px-16 px-4 py-6 z-10 w-full">
+      <header
+        className="sm:px-16 px-4 py-6 z-10 w-full"
+        style={{
+          backgroundImage:
+            "linear-gradient(180deg, rgb(5, 0, 0), rgba(5, 0, 0, 0))",
+        }}
+      >
         <nav className="flex justify-between items-center max-container">
           <a href="/" className="text-3xl font-bold">
             <img className="h-[50px]" alt="" src="./keyci-logo.png" />

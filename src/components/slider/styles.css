@@ -5,14 +5,12 @@
 }
 
 .slider img {
-  width: 100%;
   border-radius: 10px;
-  height: 20vh;
-  object-fit: cover;
 }
 
 .react-multi-carousel-list {
   justify-content: center;
+  max-height: inherit;
 }
 .react-multi-carousel-item .slider {
   transition: transform 0.2s;
