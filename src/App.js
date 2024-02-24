@@ -34,7 +34,7 @@ function App() {
           // style={{ backgroundImage: `url(${selectedVideo.background}` }}
         >
           <Navbar />
-          <div className="w-full h-[57vh] md:w-6/12 lg:w-5/12 sm:px-16 px-4 pt-14">
+          <div className="w-full h-[57vh] md:w-9/12 lg:w-5/12 sm:px-16 px-4 pt-14">
             <p className="text-5xl">{selectedVideo.title}</p>
             <p className="text-sm text-gray-400 py-8">
               {selectedVideo.vendor} -{" "}
