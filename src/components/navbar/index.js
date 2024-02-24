@@ -15,8 +15,18 @@ export default function Navbar(props) {
           </a>
           <ul className="flex-1 flex justify-end items-center gap-16 max-lg:hidden">
             {navLinks.map((item) => (
-              <li key={item.label} className={window.location.pathname === item.href && 'border-b-2'}>
-                <Link className="font-montserrat leading-normal text-lg text-white" to={item.href}>{item.label}</Link>
+              <li
+                key={item.label}
+                className={
+                  window.location.pathname === item.href && "border-b-2"
+                }
+              >
+                <Link
+                  className="font-montserrat leading-normal text-lg text-white"
+                  to={item.href}
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -30,19 +40,22 @@ export default function Navbar(props) {
       </header>
       {isMenuOpen && (
         <div>
-          <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  ">
+          <nav className="z-10 fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100">
             <div
               className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
-              onClick={() => {
-                setIsMenuOpen(!isMenuOpen);
-              }}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <AiOutlineClose className="text-4xl" />
             </div>
-            <ul className=" lg:hidden flex flex-col items-center justify-center h-full gap-y-10">
+            <ul className="bg-black lg:hidden flex flex-col items-center justify-center h-full gap-y-10">
               {navLinks.map((item) => (
-                <li key={item.label}>
-                  <Link className="font-montserrat leading-normal text-lg text-slate-gray" to={item.href}>{item.label}</Link>
+                <li key={item.label} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  <Link
+                    className="font-montserrat leading-normal text-lg text-slate-gray"
+                    to={item.href}
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
