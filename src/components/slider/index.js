@@ -28,7 +28,7 @@ const Slider = (props) => {
   const [selectedTab, setSelectedTab] = useState();
 
   useEffect(() => {
-    const selected = tabs.find((t) => t.href === location.pathname);
+    const selected = tabs.find((t) => location.pathname.endsWith(t.href));
     setSelectedTab(selected);
     setSelectedItem(selected.videos[0]);
   }, [location]);

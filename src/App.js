@@ -11,7 +11,7 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState();
 
   useEffect(() => {
-    const selectedTab = tabs.find((t) => location.href.endsWith(t.href))
+    const selectedTab = tabs.find((t) => location.pathname.endsWith(t.href));
     setSelectedTab(selectedTab);
     setSelectedVideo(selectedTab?.videos[0]);
   }, [location]);
@@ -19,7 +19,7 @@ function App() {
   return selectedTab && (
     <div
       id="bg-screen"
-      className="h-screen w-full bg-contain bg-repeat-x bg-right"
+      className="h-screen w-full bg-cover bg-center bg-no-repeat animate-background lg:bg-contain lg:bg-left-top lg:bg-repeat-x lg:animate-background-desktop"
       style={{ backgroundImage: `url(${selectedVideo.background}` }}
     >
       <div
@@ -35,7 +35,7 @@ function App() {
         >
           <Navbar />
           <div className="w-full h-[55vh] md:w-9/12 lg:w-5/12 sm:px-16 px-4 lg:pt-14 md:pt-12 sm:pt-4">
-            <p className="font-montserrat lg:text-5xl md:text-5xl text-4xl">{selectedVideo.title}</p>
+            <p className="font-montserrat text-5xl">{selectedVideo.title}</p>
             <p className="text-sm text-gray-400 pt-6 pb-4">
               {selectedVideo.vendor} -{" "}
               {new Date(selectedVideo.createAt).toLocaleDateString(
