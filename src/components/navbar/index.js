@@ -23,9 +23,7 @@ export default function Navbar(props) {
             {navLinks.map((item) => (
               <li
                 key={item.label}
-                className={
-                  window.location.pathname === item.href && "border-b-2"
-                }
+                className={props.selectedTab.href === item.href && "border-b-2"}
               >
                 <Link
                   className="font-montserrat leading-normal text-lg text-white"
