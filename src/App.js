@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar";
-import Slider from "./components/slider";
+import ImageGallery from "./components/image-gallery";
 import VideoModal from "./components/video-modal";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -34,7 +34,7 @@ function App() {
           // style={{ backgroundImage: `url(${selectedVideo.background}` }}
         >
           <Navbar selectedTab={selectedTab} />
-          <div className="w-full h-[55vh] md:w-9/12 lg:w-5/12 sm:px-16 px-4 lg:pt-14 md:pt-12 sm:pt-4">
+          <div className="w-full h-[55vh] md:w-9/12 lg:w-5/12 sm:px-16 px-4 lg:pt-14 md:pt-12 pt-6">
             <p className="font-montserrat text-5xl">{selectedVideo.title}</p>
             <p className="text-sm text-gray-400 pt-6 pb-4">
               {selectedVideo.vendor} -{" "}
@@ -48,7 +48,7 @@ function App() {
             <p dangerouslySetInnerHTML={{__html: selectedVideo.description}} />
             <VideoModal source={"https://www.youtube.com/embed/" + selectedVideo.id + "?autoplay=1&loop=1" }/>
           </div>
-          {selectedTab?.videos?.length > 1 && <Slider onChange={(video) => setSelectedVideo(video)} />}
+          {selectedTab?.videos?.length > 1 && <ImageGallery selectedTab={selectedTab} selectedVideo={selectedVideo} onChange={(video) => setSelectedVideo(video)} />}
         </div>
       </div>
     </div>
