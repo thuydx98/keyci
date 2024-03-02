@@ -6,10 +6,13 @@
 }
 
 #image-gallery {
-  justify-content: safe center;
+  /* justify-content: safe center;
   align-items: center;
   -webkit-justify-content: safe center;
-  -webkit-align-items: center;
+  -webkit-align-items: center; */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   overflow-x: scroll;
 }
