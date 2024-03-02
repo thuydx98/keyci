@@ -1,9 +1,15 @@
 ::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
   width: 0;
+  height: 0;
 }
 
 #image-gallery {
   justify-content: safe center;
+  align-items: center;
+  -webkit-justify-content: safe center;
+  -webkit-align-items: center;
   overflow: hidden;
   overflow-x: scroll;
 }

@@ -4,7 +4,7 @@ import "./styles.css";
 const ImageGallery = (props) => {
   return (
     props.selectedTab && (
-      <div id="image-gallery" className="max-h-[35vh] items-center flex gap-x-3  px-4">
+      <div id="image-gallery" className="max-h-[35vh] flex gap-x-3  px-4">
         {props.selectedTab.videos?.map((video) => {
           return (
             <img
